@@ -6,10 +6,8 @@
   <title>FounderCore — Ontdek Jouw Programma</title>
   <meta name="description" content="Beantwoord 8 korte vragen en ontdek welk FounderCore programma perfect bij jou past.">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <!-- Clash Display from Fontshare -->
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap" rel="stylesheet">
 
   <!-- Calendly -->
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
@@ -19,18 +17,18 @@
        CSS VARIABLES & RESET
        ======================================== */
     :root {
-      --color-bg: #0D0F14;
-      --color-bg-card: #161922;
-      --color-bg-elevated: #1E2330;
-      --color-accent: #C9A84C;
-      --color-accent-dim: #7A6030;
-      --color-accent-light: #E8C97A;
-      --color-text: #F0EDE8;
-      --color-text-muted: #8A8A9A;
-      --color-success: #4CAF82;
-      --color-border: #2A2F3E;
-      --font-display: 'Cormorant Garamond', serif;
-      --font-body: 'DM Sans', sans-serif;
+      --color-bg: #0F0F0F;
+      --color-bg-card: #1A1A1A;
+      --color-bg-elevated: #222222;
+      --color-accent: #009AFF;
+      --color-accent-dim: #003545;
+      --color-accent-light: #33B1FF;
+      --color-text: #F1F0F0;
+      --color-text-muted: #8A8E94;
+      --color-success: #009AFF;
+      --color-border: #2A2A2A;
+      --font-display: 'Clash Display', sans-serif;
+      --font-body: 'Clash Display', sans-serif;
       --max-width: 720px;
       --transition-speed: 300ms;
     }
@@ -67,7 +65,7 @@
       left: 0;
       right: 0;
       z-index: 100;
-      background: rgba(13, 15, 20, 0.85);
+      background: rgba(15, 15, 15, 0.9);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--color-border);
@@ -114,9 +112,9 @@
     .progress-bar-fill {
       height: 100%;
       width: 0%;
-      background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+      background: var(--color-accent);
       transition: width 400ms cubic-bezier(0.4, 0, 0.2, 1);
-      border-radius: 0 2px 2px 0;
+      border-radius: 0;
     }
 
     /* ========================================
@@ -163,7 +161,7 @@
       color: var(--color-accent);
       background: rgba(201, 168, 76, 0.1);
       border: 1px solid var(--color-accent-dim);
-      border-radius: 100px;
+      border-radius: 0;
       padding: 6px 16px;
       margin-bottom: 28px;
       letter-spacing: 0.5px;
@@ -240,10 +238,10 @@
 
     .avatar:first-child { margin-left: 0; }
     .avatar-1 { background: #3B5998; }
-    .avatar-2 { background: #8B5E3C; }
-    .avatar-3 { background: #4A7C59; }
-    .avatar-4 { background: #7B3E7E; }
-    .avatar-5 { background: var(--color-accent-dim); }
+    .avatar-2 { background: #003545; }
+    .avatar-3 { background: #0070BB; }
+    .avatar-4 { background: #004A5E; }
+    .avatar-5 { background: var(--color-accent); }
 
     .social-proof-text {
       font-size: 0.9rem;
@@ -261,14 +259,14 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
-      color: var(--color-bg);
+      background: var(--color-accent);
+      color: var(--color-text);
       font-family: var(--font-body);
       font-weight: 600;
       font-size: 1.05rem;
       padding: 16px 36px;
       border: none;
-      border-radius: 8px;
+      border-radius: 0;
       cursor: pointer;
       transition: transform 150ms ease, box-shadow 150ms ease;
       animation: pulse-glow 2.5s infinite;
@@ -277,7 +275,7 @@
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+      box-shadow: 0 8px 24px rgba(0, 154, 255, 0.3);
     }
 
     .btn-primary:active {
@@ -285,8 +283,8 @@
     }
 
     @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.35); }
-      50% { box-shadow: 0 0 0 10px rgba(201, 168, 76, 0); }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0, 154, 255, 0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(0, 154, 255, 0); }
     }
 
     .btn-secondary {
@@ -300,13 +298,13 @@
       font-size: 0.95rem;
       padding: 12px 24px;
       border: 1px solid var(--color-accent-dim);
-      border-radius: 8px;
+      border-radius: 0;
       cursor: pointer;
       transition: all 200ms ease;
     }
 
     .btn-secondary:hover {
-      background: rgba(201, 168, 76, 0.08);
+      background: rgba(0, 154, 255, 0.08);
       border-color: var(--color-accent);
     }
 
@@ -341,7 +339,7 @@
       background: var(--color-bg-card);
       border: 1px solid var(--color-border);
       border-left: 3px solid transparent;
-      border-radius: 10px;
+      border-radius: 0;
       padding: 18px 20px;
       cursor: pointer;
       transition: all 200ms ease;
@@ -361,7 +359,7 @@
     }
 
     .answer-card.selected {
-      background: rgba(201, 168, 76, 0.08);
+      background: rgba(0, 154, 255, 0.08);
       border-color: var(--color-accent);
       border-left-color: var(--color-accent);
     }
@@ -434,10 +432,10 @@
       gap: 6px;
       font-size: 0.85rem;
       font-weight: 500;
-      color: var(--color-success);
-      background: rgba(76, 175, 130, 0.1);
-      border: 1px solid rgba(76, 175, 130, 0.25);
-      border-radius: 100px;
+      color: var(--color-accent);
+      background: rgba(0, 154, 255, 0.1);
+      border: 1px solid rgba(0, 154, 255, 0.25);
+      border-radius: 0;
       padding: 6px 16px;
       margin-bottom: 20px;
     }
@@ -466,7 +464,7 @@
     .program-card {
       background: var(--color-bg-card);
       border: 1px solid var(--color-border);
-      border-radius: 16px;
+      border-radius: 0;
       padding: 32px 28px;
       margin-bottom: 40px;
       position: relative;
@@ -480,16 +478,16 @@
       left: 0;
       right: 0;
       height: 3px;
-      background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+      background: var(--color-accent);
     }
 
     .program-card-badge {
       display: inline-block;
       font-size: 0.7rem;
       font-weight: 600;
-      color: var(--color-bg);
+      color: var(--color-text);
       background: var(--color-accent);
-      border-radius: 4px;
+      border-radius: 0;
       padding: 4px 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -564,7 +562,7 @@
     .testimonial-card {
       background: var(--color-bg-card);
       border: 1px solid var(--color-border);
-      border-radius: 12px;
+      border-radius: 0;
       padding: 24px 20px;
     }
 
@@ -666,7 +664,7 @@
     .calendly-embed-wrapper {
       background: var(--color-bg-card);
       border: 1px solid var(--color-border);
-      border-radius: 12px;
+      border-radius: 0;
       overflow: hidden;
       margin-bottom: 12px;
     }
@@ -721,7 +719,7 @@
       padding: 14px 16px;
       background: var(--color-bg-card);
       border: 1px solid var(--color-border);
-      border-radius: 8px;
+      border-radius: 0;
       color: var(--color-text);
       font-family: var(--font-body);
       font-size: 16px; /* Prevent iOS zoom */
@@ -742,14 +740,14 @@
       padding: 24px;
       background: rgba(76, 175, 130, 0.08);
       border: 1px solid rgba(76, 175, 130, 0.25);
-      border-radius: 12px;
+      border-radius: 0;
       margin-top: 24px;
     }
 
     .waitlist-success h3 {
       font-family: var(--font-display);
       font-size: 1.3rem;
-      color: var(--color-success);
+      color: var(--color-accent);
       margin-bottom: 8px;
     }
 
@@ -785,7 +783,7 @@
     }
 
     .checkmark-circle {
-      stroke: var(--color-success);
+      stroke: var(--color-accent);
       stroke-width: 2;
       fill: none;
       stroke-dasharray: 166;
@@ -794,7 +792,7 @@
     }
 
     .checkmark-check {
-      stroke: var(--color-success);
+      stroke: var(--color-accent);
       stroke-width: 3;
       fill: none;
       stroke-linecap: round;
@@ -830,7 +828,7 @@
     .prep-section {
       background: var(--color-bg-card);
       border: 1px solid var(--color-border);
-      border-radius: 16px;
+      border-radius: 0;
       padding: 28px 24px;
       margin-bottom: 48px;
       text-align: left;
@@ -912,7 +910,7 @@
     .faq-item {
       background: var(--color-bg-card);
       border: 1px solid var(--color-border);
-      border-radius: 12px;
+      border-radius: 0;
       overflow: hidden;
       transition: border-color 200ms ease;
     }
@@ -926,7 +924,7 @@
       aspect-ratio: 9/16;
       max-height: 240px;
       width: 100%;
-      background: linear-gradient(135deg, var(--color-bg-elevated), rgba(122, 96, 48, 0.2));
+      background: linear-gradient(135deg, var(--color-bg-elevated), rgba(0, 53, 69, 0.3));
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -941,14 +939,14 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at center, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle at center, rgba(0, 154, 255, 0.08) 0%, transparent 70%);
     }
 
     .video-play-btn {
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: rgba(201, 168, 76, 0.2);
+      background: rgba(0, 154, 255, 0.2);
       border: 2px solid var(--color-accent);
       display: flex;
       align-items: center;
@@ -961,7 +959,7 @@
 
     .video-placeholder:hover .video-play-btn {
       transform: scale(1.08);
-      background: rgba(201, 168, 76, 0.3);
+      background: rgba(0, 154, 255, 0.3);
     }
 
     .video-play-btn svg {
@@ -1033,6 +1031,11 @@
     /* ========================================
        CONFETTI (CSS only)
        ======================================== */
+    .logo span {
+      color: var(--color-text);
+      font-weight: 400;
+    }
+
     .confetti-container {
       position: fixed;
       top: 0;
@@ -1226,19 +1229,19 @@
         <div class="answer-options">
           <div class="answer-card" data-question="1" data-score="1" onclick="selectAnswer(this)">
             <span class="answer-card-text">Ik heb nog geen aanbod — ik weet niet waar te beginnen</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="1" data-score="2" onclick="selectAnswer(this)">
             <span class="answer-card-text">Ik heb een aanbod, maar het verkoopt niet</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="1" data-score="3" onclick="selectAnswer(this)">
             <span class="answer-card-text">Ik verdien al wat, maar wil naar &euro;5K+ per maand</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="1" data-score="4" onclick="selectAnswer(this)">
             <span class="answer-card-text">Ik verdien al &euro;5K+/maand en wil verder schalen</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
         </div>
         <button class="back-btn" onclick="goBack()">
@@ -1258,19 +1261,19 @@
         <div class="answer-options">
           <div class="answer-card" data-question="2" data-score="1" onclick="selectAnswer(this)">
             <span class="answer-card-text">Ik weet niet hoe ik mijn expertise verkoopbaar maak</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="2" data-score="2" onclick="selectAnswer(this)">
             <span class="answer-card-text">Ik trek niet genoeg potenti&euml;le klanten aan</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="2" data-score="3" onclick="selectAnswer(this)">
             <span class="answer-card-text">Mensen tonen interesse maar kopen niet</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="2" data-score="4" onclick="selectAnswer(this)">
             <span class="answer-card-text">Ik verkoop, maar kan niet opschalen</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
         </div>
         <button class="back-btn" onclick="goBack()">
@@ -1290,19 +1293,19 @@
         <div class="answer-options">
           <div class="answer-card" data-question="3" data-score="4" data-urgency="true" onclick="selectAnswer(this)">
             <span class="answer-card-text">Zo snel mogelijk — de komende 4-8 weken</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="3" data-score="3" data-urgency="true" onclick="selectAnswer(this)">
             <span class="answer-card-text">Dit kwartaal — binnen 1-3 maanden</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="3" data-score="2" data-urgency="false" onclick="selectAnswer(this)">
             <span class="answer-card-text">Dit half jaar — 3-6 maanden</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="3" data-score="1" data-urgency="false" onclick="selectAnswer(this)">
             <span class="answer-card-text">Geen haast — 6+ maanden</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
         </div>
         <button class="back-btn" onclick="goBack()">
@@ -1322,19 +1325,19 @@
         <div class="answer-options">
           <div class="answer-card" data-question="4" data-score="1" onclick="selectAnswer(this)">
             <span class="answer-card-text">Nee, dit is mijn eerste poging</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="4" data-score="2" onclick="selectAnswer(this)">
             <span class="answer-card-text">Ja, maar ik gaf het snel op</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="4" data-score="3" onclick="selectAnswer(this)">
             <span class="answer-card-text">Ja, meerdere pogingen — niets werkte echt</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="4" data-score="4" onclick="selectAnswer(this)">
             <span class="answer-card-text">Ja, ik had succes maar wil nu serieus schalen</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
         </div>
         <button class="back-btn" onclick="goBack()">
@@ -1354,19 +1357,19 @@
         <div class="answer-options">
           <div class="answer-card" data-question="5" data-score="2" data-tier="1" onclick="selectAnswer(this)">
             <span class="answer-card-text">Groepscoaching — ik leer goed in een community</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="5" data-score="4" data-tier="2" onclick="selectAnswer(this)">
             <span class="answer-card-text">1-op-1 coaching — persoonlijk en op maat</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="5" data-score="4" data-tier="2" onclick="selectAnswer(this)">
             <span class="answer-card-text">Beide — groepsstructuur &eacute;n persoonlijke begeleiding</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="5" data-score="1" data-tier="0" onclick="selectAnswer(this)">
             <span class="answer-card-text">Vooral zelfstandig — video's en templates</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
         </div>
         <button class="back-btn" onclick="goBack()">
@@ -1386,19 +1389,19 @@
         <div class="answer-options">
           <div class="answer-card" data-question="6" data-score="1" data-budget="0" onclick="selectAnswer(this)">
             <span class="answer-card-text">&euro;500 – &euro;1.000 — ik wil voorzichtig beginnen</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="6" data-score="2" data-budget="1" onclick="selectAnswer(this)">
             <span class="answer-card-text">&euro;1.000 – &euro;1.500 — ik ben serieus</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="6" data-score="3" data-budget="2" onclick="selectAnswer(this)">
             <span class="answer-card-text">&euro;1.500 – &euro;2.500 — ik ben erg serieus</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="6" data-score="4" data-budget="3" onclick="selectAnswer(this)">
             <span class="answer-card-text">&euro;2.500+ — ik wil de beste resultaten</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
         </div>
         <button class="back-btn" onclick="goBack()">
@@ -1418,19 +1421,19 @@
         <div class="answer-options">
           <div class="answer-card" data-question="7" data-score="1" onclick="selectAnswer(this)">
             <span class="answer-card-text">3-5 uur per week</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="7" data-score="2" onclick="selectAnswer(this)">
             <span class="answer-card-text">5-10 uur per week</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="7" data-score="3" onclick="selectAnswer(this)">
             <span class="answer-card-text">10-15 uur per week</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="7" data-score="4" onclick="selectAnswer(this)">
             <span class="answer-card-text">15+ uur per week</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
         </div>
         <button class="back-btn" onclick="goBack()">
@@ -1450,15 +1453,15 @@
         <div class="answer-options">
           <div class="answer-card" data-question="8" data-score="4" data-authority="true" onclick="selectAnswer(this)">
             <span class="answer-card-text">Ja, ik beslis volledig zelf</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="8" data-score="2" data-authority="partial" onclick="selectAnswer(this)">
             <span class="answer-card-text">Ja, maar ik wil eerst overleggen met iemand</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
           <div class="answer-card" data-question="8" data-score="1" data-authority="false" onclick="selectAnswer(this)">
             <span class="answer-card-text">Nee, ik heb eerst goedkeuring nodig</span>
-            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0D0F14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div class="answer-check"><svg viewBox="0 0 24 24" fill="none" stroke="#0F0F0F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           </div>
         </div>
         <button class="back-btn" onclick="goBack()">
@@ -2113,7 +2116,7 @@
       container.style.display = 'block';
       container.innerHTML = '';
 
-      var colors = ['#C9A84C', '#E8C97A', '#4CAF82', '#F0EDE8', '#7A6030', '#3B82F6'];
+      var colors = ['#009AFF', '#33B1FF', '#003545', '#F1F0F0', '#0070BB', '#00C853'];
 
       for (var i = 0; i < 50; i++) {
         var piece = document.createElement('div');
