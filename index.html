@@ -94,28 +94,11 @@
     .header__logo {
       display: flex;
       align-items: center;
-      gap: 10px;
     }
 
-    /* CSS Logo mark */
-    .logo-mark {
-      width: 32px;
-      height: 32px;
-      position: relative;
-    }
-
-    .logo-mark svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .logo-text {
-      font-family: var(--font-main);
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--color-text);
-      letter-spacing: 2px;
-      text-transform: uppercase;
+    .header__logo-img {
+      height: 28px;
+      width: auto;
     }
 
     .header__cta {
@@ -806,13 +789,8 @@
       width: 160px;
       height: 160px;
       min-width: 160px;
-      background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--color-text);
+      object-fit: cover;
+      object-position: center top;
     }
 
     .about__text h3 {
@@ -1027,13 +1005,7 @@
   <header class="header">
     <div class="header__inner">
       <div class="header__logo">
-        <div class="logo-mark">
-          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 6h14v4H10v4h10v4H10v4h10v4H6V6z" fill="#009AFF"/>
-            <path d="M18 6h8v4h-4v4h4v4h-4v4h4v4h-8V6z" fill="#009AFF" opacity="0.6"/>
-          </svg>
-        </div>
-        <span class="logo-text">FounderCore</span>
+        <img src="assets/logo-full.png" alt="FounderCore" class="header__logo-img">
       </div>
       <a href="#signup" class="btn btn--primary header__cta">Reserveer je Plek</a>
     </div>
@@ -1276,7 +1248,7 @@
   <section class="about">
     <div class="container">
       <div class="about__inner">
-        <div class="about__photo">J</div>
+        <img src="assets/jerriel.png" alt="Jerriël" class="about__photo">
         <div class="about__text">
           <div class="section-label">Over de host</div>
           <h3>Jerri&euml;l</h3>
