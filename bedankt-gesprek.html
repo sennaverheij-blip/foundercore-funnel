@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gesprek Geboekt — HIBOO Founder Core</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐝</text></svg>">
+  <style>
+    .ty-progress { display:flex; align-items:center; gap:0; margin-bottom:2rem; }
+    .ty-progress-step { display:flex; align-items:center; gap:.5rem; font-size:.8rem; font-weight:600; color:var(--dim); }
+    .ty-progress-step.done { color:var(--success); }
+    .ty-progress-step.active { color:var(--gold); }
+    .ty-progress-step .dot { width:28px; height:28px; border-radius:50%; background:var(--elevated); border:2px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:.75rem; }
+    .ty-progress-step.done .dot { background:rgba(34,197,94,.15); border-color:var(--success); color:var(--success); }
+    .ty-progress-step.active .dot { background:var(--gold-bg); border-color:var(--gold); color:var(--gold); }
+    .ty-progress-line { flex:1; height:2px; background:var(--border); margin:0 .5rem; }
+    .ty-progress-line.done { background:var(--success); }
+    .prepare-card { background:var(--elevated); border:1px solid var(--border); border-radius:var(--radius-lg); padding:2rem; }
+    .prepare-item { display:flex; gap:1rem; padding:.875rem 0; border-bottom:1px solid var(--border); }
+    .prepare-item:last-child { border-bottom:none; }
+    .prepare-num { width:32px; height:32px; min-width:32px; border-radius:50%; background:var(--gold-bg); border:1.5px solid rgba(234,179,8,.3); display:flex; align-items:center; justify-content:center; font-size:.8rem; font-weight:800; color:var(--gold); }
+    .prepare-text h4 { font-size:.95rem; font-weight:700; margin-bottom:.2rem; }
+    .prepare-text p { font-size:.85rem; color:var(--muted); line-height:1.6; }
+  </style>
+</head>
+<body>
+
+<nav class="nav" style="position:relative;padding:.75rem 0;border-bottom:1px solid var(--border);">
+  <div class="nav-inner" style="justify-content:center;">
+    <a href="index.html" class="nav-logo">HIBOO<span>.</span></a>
+  </div>
+</nav>
+
+<section style="padding-top:3rem;padding-bottom:5rem;">
+  <div class="container" style="max-width:780px;">
+
+    <!-- Progress -->
+    <div class="ty-progress reveal">
+      <div class="ty-progress-step done"><div class="dot">✓</div><span>Webinar</span></div>
+      <div class="ty-progress-line done"></div>
+      <div class="ty-progress-step done"><div class="dot">✓</div><span>Aanvraag</span></div>
+      <div class="ty-progress-line done"></div>
+      <div class="ty-progress-step active"><div class="dot">★</div><span>Gesprek geboekt</span></div>
+      <div class="ty-progress-line"></div>
+      <div class="ty-progress-step"><div class="dot">4</div><span>Start Founder Core</span></div>
+    </div>
+
+    <!-- Main block -->
+    <div class="text-center reveal" style="margin-bottom:3rem;">
+      <div class="ty-icon gold" style="margin-bottom:1.5rem;">📞</div>
+      <h1 style="font-size:clamp(2rem,5vw,3rem);margin-bottom:.75rem;">
+        Jouw gesprek staat in de agenda. 🙌
+      </h1>
+      <p style="font-size:1.1rem;max-width:560px;margin-inline:auto;line-height:1.75;color:var(--muted);">
+        Goed gedaan. Je hebt de eerste echte stap gezet. Je ontvangt een bevestiging per e-mail met alle details van het gesprek.
+      </p>
+    </div>
+
+    <!-- Gesprek details -->
+    <div class="card card-gold reveal" style="margin-bottom:2rem;">
+      <h3 style="margin-bottom:1.5rem;">🗓️ Jouw kwalificatiegesprek</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem;">
+        <div>
+          <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Type gesprek</div>
+          <div style="font-weight:700;">Kwalificatiegesprek</div>
+        </div>
+        <div>
+          <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Duur</div>
+          <div style="font-weight:700;">30–45 minuten</div>
+        </div>
+        <div>
+          <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Platform</div>
+          <div style="font-weight:700;">Zoom (link in je e-mail)</div>
+        </div>
+        <div>
+          <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Kosten</div>
+          <div style="font-weight:700;color:var(--success);">Volledig gratis</div>
+        </div>
+      </div>
+      <div class="notice" style="margin-top:0;">
+        <span class="icon">💡</span>
+        <span>Dit is geen verkoopgesprek. We kijken samen of Founder Core 2.0 bij jou past. Je staat nergens toe verplicht.</span>
+      </div>
+    </div>
+
+    <!-- Bereid je voor -->
+    <div class="prepare-card reveal" style="margin-bottom:2rem;">
+      <h3 style="margin-bottom:.5rem;">Bereid je voor — zodat je het meeste uit het gesprek haalt</h3>
+      <p style="font-size:.875rem;color:var(--muted);margin-bottom:1.5rem;">De people die het gesprek goed voorbereiden, halen er het meeste uit. 10 minuten nadenken nu = 30 minuten beter gesprek.</p>
+
+      <div class="prepare-item">
+        <div class="prepare-num">1</div>
+        <div class="prepare-text">
+          <h4>Waar sta je nu precies?</h4>
+          <p>Wat heb je al geprobeerd op het gebied van online ondernemen? Welke resultaten had dat? Wat werkt (nog) niet?</p>
+        </div>
+      </div>
+      <div class="prepare-item">
+        <div class="prepare-num">2</div>
+        <div class="prepare-text">
+          <h4>Wat wil je bereiken in de komende 3–6 maanden?</h4>
+          <p>Specifiek: welk bedrag per maand? Welke vrijheid? Hoe ziet jouw "perfecte dag" eruil? Wees concreet.</p>
+        </div>
+      </div>
+      <div class="prepare-item">
+        <div class="prepare-num">3</div>
+        <div class="prepare-text">
+          <h4>Wat houdt je momenteel tegen?</h4>
+          <p>Eerlijk antwoord: is het tijd, geld, twijfel, kennis of iets anders? Dit helpt ons om jou de juiste richting te geven.</p>
+        </div>
+      </div>
+      <div class="prepare-item">
+        <div class="prepare-num">4</div>
+        <div class="prepare-text">
+          <h4>Ben je klaar om te investeren — in jezelf?</h4>
+          <p>Niet alleen financieel, maar ook in tijd en energie. Founder Core vraagt 5–8 uur per week. Kun jij dat vrijmaken?</p>
+        </div>
+      </div>
+      <div class="prepare-item">
+        <div class="prepare-num">5</div>
+        <div class="prepare-text">
+          <h4>Noteer jouw belangrijkste vraag</h4>
+          <p>Wat is de ene vraag die je altijd al wilde stellen over online ondernemen, maar nog nooit een eerlijk antwoord op kreeg?</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wat te verwachten -->
+    <div class="card reveal" style="margin-bottom:2rem;">
+      <h3 style="margin-bottom:1.25rem;">Wat er tijdens het gesprek gebeurt</h3>
+      <ul class="check-list">
+        <li>We vragen jou naar je huidige situatie en waar je naartoe wil</li>
+        <li>We luisteren naar wat je al hebt geprobeerd en waarom het niet werkte</li>
+        <li>We leggen uit hoe Founder Core 2.0 jou specifiek kan helpen</li>
+        <li>We beantwoorden al je vragen over het programma, de investering en de verwachtingen</li>
+        <li>Als we beiden het gevoel hebben dat het klopt, bespreken we de volgende stap</li>
+      </ul>
+      <div style="margin-top:1.5rem;padding:1rem;background:var(--elevated);border-radius:var(--radius);border:1px solid var(--border);">
+        <p style="font-size:.875rem;"><strong style="color:var(--white);">Geen druk.</strong> <span style="color:var(--muted);">Als Founder Core 2.0 niet de juiste fit is voor jou, zeggen we dat eerlijk. We willen dat je de juiste beslissing maakt — niet dat je ja zegt en spijt krijgt.</span></p>
+      </div>
+    </div>
+
+    <!-- Programma preview -->
+    <div style="background:var(--elevated);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;margin-bottom:2rem;" class="reveal">
+      <h3 style="margin-bottom:1rem;">📚 Alvast bekijken: het programma</h3>
+      <p style="font-size:.875rem;color:var(--muted);margin-bottom:1.25rem;">Zo kom je goed voorbereid het gesprek in. Bekijk wat er in de 8 weken zit.</p>
+      <a href="programma.html" class="btn btn-outline">Bekijk het volledige programma →</a>
+    </div>
+
+    <!-- Persoonlijke noot -->
+    <div class="card reveal" style="background:linear-gradient(135deg,var(--card),rgba(234,179,8,.03));">
+      <div style="display:flex;gap:1rem;align-items:flex-start;">
+        <div class="testimonial-avatar" style="width:52px;height:52px;flex-shrink:0;font-size:1.1rem;">J</div>
+        <div>
+          <div style="font-weight:700;margin-bottom:.3rem;">Een persoonlijk bericht van Jerriël</div>
+          <p style="font-size:.9rem;line-height:1.75;font-style:italic;color:var(--muted);">"Ik praat elke week met mensen die jarenlang hebben gewacht om deze stap te zetten. En de nummer één reden waarom ze wachtten? Ze waren bang dat hun kennis niet goed genoeg was. Dat is precies de reden waarom ik dit gesprek zo waardevol vind. In 30 minuten laat ik je zien waarom jij meer dan genoeg hebt om te starten. Tot dan."</p>
+          <div style="margin-top:.75rem;font-weight:600;font-size:.875rem;">— Jerriël, Oprichter HIBOO</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center reveal" style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);">
+      <p style="font-size:.875rem;color:var(--dim);">Vragen? Stuur een e-mail naar <a href="mailto:info@hiboo.nl" style="color:var(--gold);">info@hiboo.nl</a> of DM ons op <a href="https://www.instagram.com/hiboo.nl" style="color:var(--gold);" target="_blank">@hiboo.nl</a></p>
+    </div>
+
+  </div>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>

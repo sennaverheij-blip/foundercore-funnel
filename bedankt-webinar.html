@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Je plek is gereserveerd! — HIBOO Webinar</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐝</text></svg>">
+  <style>
+    .ty-progress { display:flex; align-items:center; gap:0; margin-bottom:2rem; }
+    .ty-progress-step { display:flex; align-items:center; gap:.5rem; font-size:.8rem; font-weight:600; color:var(--dim); }
+    .ty-progress-step.done { color:var(--success); }
+    .ty-progress-step.active { color:var(--gold); }
+    .ty-progress-step .dot { width:28px; height:28px; border-radius:50%; background:var(--elevated); border:2px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:.75rem; }
+    .ty-progress-step.done .dot { background:rgba(34,197,94,.15); border-color:var(--success); color:var(--success); }
+    .ty-progress-step.active .dot { background:var(--gold-bg); border-color:var(--gold); color:var(--gold); }
+    .ty-progress-line { flex:1; height:2px; background:var(--border); margin:0 .5rem; }
+    .ty-progress-line.done { background:var(--success); }
+    .bonus-card { background:linear-gradient(135deg,rgba(234,179,8,.06),rgba(234,179,8,.02)); border:1px solid rgba(234,179,8,.2); border-radius:var(--radius-lg); padding:2rem; }
+    .share-btn { display:inline-flex; align-items:center; gap:.5rem; padding:.65rem 1.25rem; border-radius:var(--radius); font-size:.875rem; font-weight:600; border:1.5px solid var(--border); color:var(--muted); cursor:pointer; transition:all var(--transition); background:transparent; }
+    .share-btn:hover { border-color:var(--border-hi); color:var(--white); }
+  </style>
+</head>
+<body>
+
+<!-- Minimal nav -->
+<nav class="nav" style="position:relative;padding:.75rem 0;border-bottom:1px solid var(--border);">
+  <div class="nav-inner" style="justify-content:center;">
+    <a href="index.html" class="nav-logo">HIBOO<span>.</span></a>
+  </div>
+</nav>
+
+<section style="padding-top:3rem;padding-bottom:5rem;">
+  <div class="container" style="max-width:780px;">
+
+    <!-- Progress indicator -->
+    <div class="ty-progress reveal">
+      <div class="ty-progress-step done">
+        <div class="dot">✓</div>
+        <span>Registratie</span>
+      </div>
+      <div class="ty-progress-line done"></div>
+      <div class="ty-progress-step active">
+        <div class="dot">2</div>
+        <span>Bevestiging</span>
+      </div>
+      <div class="ty-progress-line"></div>
+      <div class="ty-progress-step">
+        <div class="dot">3</div>
+        <span>Webinar</span>
+      </div>
+      <div class="ty-progress-line"></div>
+      <div class="ty-progress-step">
+        <div class="dot">4</div>
+        <span>Gesprek boeken</span>
+      </div>
+    </div>
+
+    <!-- Main thank you block -->
+    <div class="text-center reveal" style="margin-bottom:3rem;">
+      <div class="ty-icon success" style="margin-bottom:1.5rem;">✓</div>
+      <h1 style="font-size:clamp(2rem,5vw,3.25rem);margin-bottom:.75rem;">
+        Je plek is gereserveerd. 🎉
+      </h1>
+      <p style="font-size:1.1rem;max-width:560px;margin-inline:auto;line-height:1.75;">
+        Check je inbox — je ontvangt binnen een paar minuten een e-mail met de Zoom-link en alle details. Controleer ook je spam-map.
+      </p>
+    </div>
+
+    <!-- Webinar details card -->
+    <div class="card card-gold reveal" style="margin-bottom:2rem;">
+      <h3 style="margin-bottom:1.5rem;">📅 Jouw webinar details</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+        <div>
+          <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Datum & tijd</div>
+          <div style="font-weight:700;color:var(--white);" class="webinar-date-display">Wordt geladen...</div>
+        </div>
+        <div>
+          <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Platform</div>
+          <div style="font-weight:700;color:var(--white);">Zoom (link in je e-mail)</div>
+        </div>
+        <div>
+          <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Duur</div>
+          <div style="font-weight:700;color:var(--white);">90 minuten + live Q&A</div>
+        </div>
+        <div>
+          <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Meenemen</div>
+          <div style="font-weight:700;color:var(--white);">Notitieboek, open mind ✍️</div>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+        <p style="font-size:.875rem;color:var(--muted);">💡 <strong style="color:var(--white);">Tip:</strong> Sla de Zoom-link op in je agenda. Je ontvangt ook automatische herinneringen 24 uur en 1 uur voor het webinar.</p>
+      </div>
+    </div>
+
+    <!-- Countdown -->
+    <div class="reveal" style="margin-bottom:2rem;text-align:center;">
+      <p style="font-size:.875rem;color:var(--muted);margin-bottom:1rem;">Het webinar begint over:</p>
+      <div class="countdown" style="justify-content:center;">
+        <div class="countdown-unit"><span class="countdown-num" id="cd-days">00</span><span class="countdown-label">Dagen</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="countdown-num" id="cd-hours">00</span><span class="countdown-label">Uren</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="countdown-num" id="cd-minutes">00</span><span class="countdown-label">Min</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="countdown-num" id="cd-seconds">00</span><span class="countdown-label">Sec</span></div>
+      </div>
+    </div>
+
+    <!-- Next steps -->
+    <div class="next-steps-card reveal" style="margin-bottom:2rem;">
+      <h3>Wat te doen terwijl je wacht</h3>
+      <div class="steps" style="margin-top:1.5rem;">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-line"></div>
+          <div class="step-content">
+            <h4>Check je inbox</h4>
+            <p>Je ontvangt de bevestigingsmail met Zoom-link binnen 5 minuten. Staat hij niet in je inbox? Check je spam-map en voeg info@hiboo.nl toe aan je contacten.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-line"></div>
+          <div class="step-content">
+            <h4>Volg HIBOO op Instagram</h4>
+            <p>Dagelijkse waarde, tips en behind-the-scenes van het cohort. DM ons het woord <strong style="color:var(--gold);">WEBINAR</strong> voor een gratis voorproefje van de content.</p>
+            <a href="https://www.instagram.com/hiboo.nl" target="_blank" class="btn btn-outline btn-sm" style="margin-top:.75rem;">
+              Volg @hiboo.nl →
+            </a>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-line"></div>
+          <div class="step-content">
+            <h4>Bereid één vraag voor</h4>
+            <p>Aan het einde van het webinar is er een live Q&A. Bedenk nu al: wat is de ene vraag waarop jij al lang een antwoord zoekt? Jerriël beantwoordt hem live.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>Zet het in je agenda</h4>
+            <p>Plan het webinar alvast in je agenda. 90 minuten zonder afleiding. Zet je telefoon op stil, sluit onnodige tabs en bereid een notitieboek voor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bonus -->
+    <div class="bonus-card reveal" style="margin-bottom:2rem;">
+      <div style="display:flex;align-items:flex-start;gap:1rem;">
+        <div style="font-size:2rem;">🎁</div>
+        <div>
+          <h4 style="margin-bottom:.5rem;">Bonus: De HIBOO Quick-Start Checklist</h4>
+          <p style="font-size:.9rem;margin-bottom:1rem;">Om maximaal uit het webinar te halen, sturen we je de Quick-Start Checklist mee in de bevestigingsmail. 5 dingen die je nu al kunt doen om klaar te zijn voor het webinar.</p>
+          <p style="font-size:.8rem;color:var(--dim);">Je ontvangt dit automatisch — check je inbox.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social share -->
+    <div class="card reveal" style="text-align:center;">
+      <h4 style="margin-bottom:.5rem;">Ken je iemand die dit ook moet zien?</h4>
+      <p style="font-size:.875rem;margin-bottom:1.25rem;">Deel het webinar met een vriend of collega die ook wil starten met online ondernemen.</p>
+      <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;">
+        <button class="share-btn" data-copy="Ik heb me aangemeld voor het gratis HIBOO webinar. Hier leer je hoe je een personal brand bouwt dat klanten aantrekt. Reserveer jouw plek: https://hiboo.nl/webinar">
+          📋 Kopieer link
+        </button>
+        <a href="https://wa.me/?text=Ik%20heb%20me%20aangemeld%20voor%20het%20gratis%20HIBOO%20webinar.%20Hier%20leer%20je%20hoe%20je%20een%20personal%20brand%20bouwt.%20https%3A%2F%2Fhiboo.nl%2Fwebinar" target="_blank" class="share-btn">
+          💬 Deel via WhatsApp
+        </a>
+        <a href="https://www.instagram.com/hiboo.nl" target="_blank" class="share-btn">
+          📸 Tag ons op Instagram
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center reveal" style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);">
+      <p style="font-size:.9rem;color:var(--muted);margin-bottom:1rem;">Wil je alvast het programma bekijken? Geen verplichtingen.</p>
+      <a href="programma.html" class="btn btn-outline">Bekijk Founder Core 2.0 →</a>
+    </div>
+
+  </div>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>

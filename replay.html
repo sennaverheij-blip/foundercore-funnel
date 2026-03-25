@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webinar Replay — Beperkt beschikbaar | HIBOO</title>
+  <meta name="description" content="Je hebt de live sessie gemist. Je hebt nog 48 uur om de replay te bekijken en een kwalificatiegesprek te boeken voor Founder Core 2.0.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐝</text></svg>">
+  <style>
+    .video-placeholder {
+      background: var(--elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      aspect-ratio: 16/9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      cursor: pointer;
+      transition: border-color var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .video-placeholder:hover { border-color: var(--gold); }
+    .video-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(234,179,8,.04), transparent);
+    }
+    .play-btn {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .video-placeholder:hover .play-btn { transform: scale(1.1); box-shadow: 0 0 32px rgba(234,179,8,.4); }
+    .play-icon { width: 0; height: 0; border-style: solid; border-width: 14px 0 14px 24px; border-color: transparent transparent transparent #000; margin-left: 4px; }
+    .deadline-bar {
+      background: linear-gradient(135deg, rgba(239,68,68,.1), rgba(239,68,68,.04));
+      border: 1px solid rgba(239,68,68,.25);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" style="position:relative;padding:.75rem 0;border-bottom:1px solid var(--border);">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">HIBOO<span>.</span></a>
+    <a href="#boek-gesprek" class="btn btn-primary btn-sm">Boek jouw gesprek →</a>
+  </div>
+</nav>
+
+<section style="padding-top:5rem;padding-bottom:5rem;">
+  <div class="container" style="max-width:900px;">
+
+    <!-- URGENCY TOP -->
+    <div class="deadline-bar reveal" style="margin-bottom:2rem;">
+      <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+        <div class="urgency-dot"></div>
+        <div>
+          <div style="font-weight:700;color:var(--white);margin-bottom:.2rem;">⏱️ Replay beschikbaar tot <span id="replay-deadline">72 uur na het webinar</span></div>
+          <p style="font-size:.85rem;margin:0;">Na het verstrijken van de deadline wordt de replay verwijderd en sluit het inschrijfvenster.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="reveal" style="margin-bottom:2.5rem;">
+      <span class="label">Webinar Replay</span>
+      <h1 style="margin-bottom:.75rem;">
+        Je hebt de live sessie gemist.<br>De replay is <em style="color:var(--gold);">nog beschikbaar.</em>
+      </h1>
+      <p style="font-size:1.1rem;color:var(--muted);max-width:680px;line-height:1.75;">
+        Hieronder vind je de volledige opname van het webinar <strong style="color:var(--white);">"Bouw een Personal Brand die Klanten Aantrekt"</strong> met Jerriël. Na de replay kun je direct een kwalificatiegesprek boeken.
+      </p>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="video-placeholder reveal" style="margin-bottom:2rem;" role="button" tabindex="0" aria-label="Webinar replay afspelen">
+      <div class="play-btn">
+        <div class="play-icon"></div>
+      </div>
+      <div style="text-align:center;position:relative;z-index:1;">
+        <div style="font-weight:700;font-size:1.1rem;margin-bottom:.35rem;">Klik om de replay te starten</div>
+        <div style="font-size:.875rem;color:var(--muted);">Bouw een Personal Brand die Klanten Aantrekt — 90 minuten</div>
+      </div>
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="reveal" style="margin-bottom:2.5rem;text-align:center;">
+      <p style="font-size:.875rem;color:var(--muted);margin-bottom:1rem;">Replay verdwijnt over:</p>
+      <div class="countdown" style="justify-content:center;">
+        <div class="countdown-unit"><span class="countdown-num" id="cd-days">00</span><span class="countdown-label">Dagen</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="countdown-num" id="cd-hours">00</span><span class="countdown-label">Uren</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="countdown-num" id="cd-minutes">00</span><span class="countdown-label">Min</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="countdown-num" id="cd-seconds">00</span><span class="countdown-label">Sec</span></div>
+      </div>
+    </div>
+
+    <hr class="gradient-line" style="margin-bottom:2.5rem;">
+
+    <!-- 3 KERNLESSEN -->
+    <div class="reveal" style="margin-bottom:2.5rem;">
+      <h2 style="margin-bottom:1.5rem;font-size:1.75rem;">Wat je in dit webinar leert</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div style="font-size:1.5rem;margin-bottom:.75rem;">🧠</div>
+          <h4 style="margin-bottom:.5rem;">Les 1: Waarom je nu niets verdient</h4>
+          <p style="font-size:.875rem;">De drie redenen waarom de meeste creators en experts nooit geld verdienen met hun kennis — en hoe je ze elk elimineert.</p>
+        </div>
+        <div class="card card-gold">
+          <div style="font-size:1.5rem;margin-bottom:.75rem;">🗺️</div>
+          <h4 style="margin-bottom:.5rem;">Les 2: Het Personal Brand Framework</h4>
+          <p style="font-size:.875rem;">Het 3-staps systeem dat een personal brand bouwt dat de juiste klanten aantrekt — zonder groot publiek, zonder dure tools.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:1.5rem;margin-bottom:.75rem;">💬</div>
+          <h4 style="margin-bottom:.5rem;">Les 3: Jouw eerste klant aantrekken</h4>
+          <p style="font-size:.875rem;">De DM-strategie en content-aanpak die leiden tot betalende klanten — ook als je net begint en niemand je kent.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOEK GESPREK CTA -->
+    <div id="boek-gesprek" class="cta-section reveal" style="margin-bottom:2.5rem;">
+      <span class="label">Volgende stap</span>
+      <h2 style="font-size:2rem;">Klaar om te starten?</h2>
+      <p style="max-width:560px;margin-inline:auto;">Boek nu jouw gratis kwalificatiegesprek. Nog <strong style="color:var(--white);">enkele plekken beschikbaar</strong> in het volgende cohort.</p>
+
+      <div style="margin:2rem 0;">
+        <div class="urgency-bar" style="max-width:480px;margin-inline:auto;">
+          <div class="urgency-dot"></div>
+          <span>Inschrijving sluit zodra de replay verdwijnt. Er zijn nog <strong style="color:var(--white);">minder dan 5 plekken</strong> beschikbaar.</span>
+        </div>
+      </div>
+
+      <div class="cta-actions">
+        <a href="bedankt-gesprek.html" class="btn btn-primary btn-lg">
+          Boek jouw gratis kwalificatiegesprek →
+        </a>
+      </div>
+      <p style="margin-top:.75rem;font-size:.8rem;color:var(--dim);">Geen verplichtingen. Gratis gesprek van 30–45 minuten.</p>
+    </div>
+
+    <!-- VALUE STACK SAMENVATTING -->
+    <div class="reveal" style="margin-bottom:2.5rem;">
+      <h3 style="margin-bottom:1.25rem;">Wat je krijgt met Founder Core 2.0</h3>
+      <div style="display:grid;gap:.75rem;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:1rem;background:var(--elevated);border-radius:var(--radius);border:1px solid var(--border);">
+          <span style="font-size:.95rem;">🎙️ 10 Live calls met Jerriël</span><span style="color:var(--gold);font-weight:700;font-size:.875rem;">€800 waarde</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:1rem;background:var(--elevated);border-radius:var(--radius);border:1px solid var(--border);">
+          <span style="font-size:.95rem;">🎨 2 Live Personal Branding sessies</span><span style="color:var(--gold);font-weight:700;font-size:.875rem;">€400 waarde</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:1rem;background:var(--elevated);border-radius:var(--radius);border:1px solid var(--border);">
+          <span style="font-size:.95rem;">💬 Ask Jerriël — on-demand 1-op-1 support</span><span style="color:var(--gold);font-weight:700;font-size:.875rem;">€300 waarde</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:1rem;background:var(--elevated);border-radius:var(--radius);border:1px solid var(--border);">
+          <span style="font-size:.95rem;">🎓 Masterclass Vault (6 modules)</span><span style="color:var(--gold);font-weight:700;font-size:.875rem;">€600 waarde</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:1rem;background:var(--elevated);border-radius:var(--radius);border:1px solid var(--border);">
+          <span style="font-size:.95rem;">🧰 Founder Toolkit (GPT's, templates, frameworks)</span><span style="color:var(--gold);font-weight:700;font-size:.875rem;">€350 waarde</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:1rem;background:var(--elevated);border-radius:var(--radius);border:1px solid var(--border);">
+          <span style="font-size:.95rem;">👥 Private community</span><span style="color:var(--gold);font-weight:700;font-size:.875rem;">€200 waarde</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1rem;background:var(--gold-bg);border-radius:var(--radius);border:1px solid rgba(234,179,8,.25);">
+          <div>
+            <div style="font-size:.75rem;color:var(--muted);margin-bottom:.2rem;">Totale waarde <span style="text-decoration:line-through;">€2.650</span></div>
+            <div style="font-weight:800;font-size:1.1rem;">Jouw investering</div>
+          </div>
+          <div style="font-family:var(--font-disp);font-size:2rem;font-weight:800;color:var(--gold);">€1.497</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIAL -->
+    <div class="reveal" style="margin-bottom:2.5rem;">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-quote">Ik had het webinar gemist en dacht dat ik de boot had gemist. Maar de replay was er nog, ik keek hem dezelfde avond en boekte diezelfde nacht het gesprek. Beste beslissing die ik ooit heb gemaakt.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AV</div>
+          <div>
+            <div class="testimonial-name">Anke V.</div>
+            <div class="testimonial-role">Founder Core deelnemer — €4.800/maand na 8 weken</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="reveal" style="margin-bottom:2.5rem;">
+      <h3 style="margin-bottom:1.25rem;">Veelgestelde vragen</h3>
+      <div class="faq-item">
+        <button class="faq-question">Is er ook een betaalplan?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Ja. Tier 1 kun je betalen in 2 termijnen van €750. Dit bespreek je in het kwalificatiegesprek. Er zijn geen extra kosten verbonden aan gespreide betaling.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Wat als ik nog niet klaar ben?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">"Klaar zijn" is een gevoel — geen realiteit. De mensen die het meeste uit Founder Core halen zijn mensen die beginnen voordat ze het gevoel hebben klaar te zijn. Het programma begeleidt je van waar je nu bent naar waar je wilt zijn. Dat is de hele bedoeling.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Wanneer start het volgende cohort?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Er start maandelijks een nieuw cohort. Dit inschrijfvenster sluit zodra de replay verdwijnt. Na sluiting moet je wachten op het volgende webinar. Als er nu plekken zijn, zijn die weg zodra het venster sluit.</div>
+      </div>
+    </div>
+
+    <!-- FINAL CTA -->
+    <div class="cta-section reveal">
+      <h2>Dit venster sluit binnenkort.</h2>
+      <p>Wacht niet tot morgen. Over een jaar sta je op exact dezelfde plek als je vandaag geen actie onderneemt.</p>
+      <div class="cta-actions">
+        <a href="bedankt-gesprek.html" class="btn btn-primary btn-lg">Boek jouw gratis gesprek nu →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="js/main.js"></script>
+<script>
+  // Set replay deadline to 72h from now (in production, this would be a fixed date)
+  const replayDeadline = new Date(Date.now() + 72 * 3600 * 1000);
+  document.getElementById('replay-deadline').textContent =
+    replayDeadline.toLocaleDateString('nl-NL', {weekday:'long',day:'numeric',month:'long'}) +
+    ' om ' + String(replayDeadline.getHours()).padStart(2,'0') + ':00 uur';
+
+  // Override countdown for replay
+  (function() {
+    const els = {
+      days: document.getElementById('cd-days'),
+      hours: document.getElementById('cd-hours'),
+      minutes: document.getElementById('cd-minutes'),
+      seconds: document.getElementById('cd-seconds'),
+    };
+    function update() {
+      const diff = Math.max(0, replayDeadline - Date.now());
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      if(els.days) els.days.textContent = String(d).padStart(2,'0');
+      if(els.hours) els.hours.textContent = String(h).padStart(2,'0');
+      if(els.minutes) els.minutes.textContent = String(m).padStart(2,'0');
+      if(els.seconds) els.seconds.textContent = String(s).padStart(2,'0');
+    }
+    update();
+    setInterval(update, 1000);
+  })();
+</script>
+</body>
+</html>
